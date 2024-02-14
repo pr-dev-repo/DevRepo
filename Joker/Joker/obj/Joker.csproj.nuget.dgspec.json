@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabrirodriguez\\Documents\\Joker\\Joker\\Joker.csproj": {}
+    "C:\\Users\\Gabrirodriguez\\Documents\\DevRepo\\Joker\\Joker\\Joker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabrirodriguez\\Documents\\Joker\\Joker\\Joker.csproj": {
+    "C:\\Users\\Gabrirodriguez\\Documents\\DevRepo\\Joker\\Joker\\Joker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabrirodriguez\\Documents\\Joker\\Joker\\Joker.csproj",
+        "projectUniqueName": "C:\\Users\\Gabrirodriguez\\Documents\\DevRepo\\Joker\\Joker\\Joker.csproj",
         "projectName": "Joker",
-        "projectPath": "C:\\Users\\Gabrirodriguez\\Documents\\Joker\\Joker\\Joker.csproj",
+        "projectPath": "C:\\Users\\Gabrirodriguez\\Documents\\DevRepo\\Joker\\Joker\\Joker.csproj",
         "packagesPath": "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabrirodriguez\\Documents\\Joker\\Joker\\obj\\",
+        "outputPath": "C:\\Users\\Gabrirodriguez\\Documents\\DevRepo\\Joker\\Joker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gabrirodriguez\\AppData\\Roaming\\NuGet\\NuGet.Config",

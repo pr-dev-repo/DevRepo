@@ -8,92 +8,126 @@ namespace Joker
     /// </summary>
     internal class Program
     {
-        [DllImport("user32.dll")]
-        static extern bool SetCursorPos(int X, int Y);
+        const int MOUSEEVENTF_MOVE = 0x0001;
 
         [DllImport("user32.dll")]
-        static extern bool GetCursorPos(out POINT lpPoint);
+        static extern void mouse_event(int dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        static extern uint GetTickCount();
 
         [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool GetCursorInfo(out CURSORINFO pci);
+        static extern bool GetLastInputInfo(ref LASTINPUTINFO plii);
 
-        [StructLayout(LayoutKind.Sequential)]
-        struct POINT
+        struct LASTINPUTINFO
         {
-            public int X;
-            public int Y;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        struct CURSORINFO
-        {
-            public int cbSize;
-            public int flags;
-            public IntPtr hCursor;
-            public POINT ptScreenPos;
+            public uint cbSize;
+            public uint dwTime;
         }
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Press 'Z' to toggle Zen mode. Press any other key to exit.");
+            const int MOUSE_MOVE_AMOUNT = 10; // Adjust this value as needed
+            const int CHECK_INTERVAL = 10000; // Check every 10 seconds
 
-            var random = new Random();
-            bool zenMode = false;
+            bool isActive = true;
 
-            while (true)
+            while (isActive)
             {
-                if (Console.KeyAvailable)
-                {
-                    var key = Console.ReadKey(true);
-                    if (key.Key == ConsoleKey.Z)
-                    {
-                        zenMode = !zenMode;
-                        Console.WriteLine($"Zen mode {(zenMode ? "enabled" : "disabled")}");
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-
-                if (!zenMode)
-                {
-                    MoveMouseRandomly(random);
-                }
-                else
-                {
-                    KeepScreenActive();
-                }
-
-                Thread.Sleep(1000); // Adjust the delay as needed
+                MoveMouse(MOUSE_MOVE_AMOUNT);
+                ResetIdleTimer();
+                Thread.Sleep(CHECK_INTERVAL);
             }
         }
 
-        static void MoveMouseRandomly(Random random)
+        static void MoveMouse(int distance)
         {
-            POINT currentPos;
-            GetCursorPos(out currentPos);
-
-            int newX = currentPos.X + random.Next(-5, 5);
-            int newY = currentPos.Y + random.Next(-5, 5);
-
-            SetCursorPos(newX, newY);
+            mouse_event(MOUSEEVENTF_MOVE, distance, distance, 0, 0);
         }
 
-        static void KeepScreenActive()
+        static void ResetIdleTimer()
         {
-            CURSORINFO pci;
-            pci.cbSize = Marshal.SizeOf(typeof(CURSORINFO));
+            var lastInputInfo = new LASTINPUTINFO();
+            lastInputInfo.cbSize = (uint)Marshal.SizeOf(lastInputInfo);
+            lastInputInfo.dwTime = 0;
 
-            if (GetCursorInfo(out pci))
+            if (GetLastInputInfo(ref lastInputInfo))
             {
-                if (pci.flags == 0)
+                // Resetting the idle timer by simulating a keyboard event
+                uint currentTickCount = GetTickCount();
+                uint elapsedTime = currentTickCount - lastInputInfo.dwTime;
+
+                if (elapsedTime >= 0 && elapsedTime < uint.MaxValue)
                 {
-                    // Cursor is hidden, move it slightly to keep the screen active
-                    SetCursorPos(pci.ptScreenPos.X + 1, pci.ptScreenPos.Y + 1);
+                    uint simulatedElapsedTime = elapsedTime + 100; // Simulate some activity
+                    INPUT[] inputs = new INPUT[1];
+                    inputs[0].type = INPUT_KEYBOARD;
+                    inputs[0].U.ki.wVk = 0;
+                    inputs[0].U.ki.wScan = 0;
+                    inputs[0].U.ki.dwFlags = KEYEVENTF_SCANCODE;
+                    inputs[0].U.ki.time = 0;
+                    inputs[0].U.ki.dwExtraInfo = IntPtr.Zero;
+
+                    SendInput(1, inputs, INPUT.Size);
                 }
             }
         }
+
+        const uint INPUT_KEYBOARD = 1;
+        const uint KEYEVENTF_SCANCODE = 8;
+
+        [StructLayout(LayoutKind.Sequential)]
+        struct INPUT
+        {
+            public uint type;
+            public InputUnion U;
+
+            public static int Size => Marshal.SizeOf(typeof(INPUT));
+        }
+
+        [StructLayout(LayoutKind.Explicit)]
+        struct InputUnion
+        {
+            [FieldOffset(0)]
+            public KEYBDINPUT ki;
+
+            [FieldOffset(0)]
+            public MOUSEINPUT mi;
+
+            [FieldOffset(0)]
+            public HARDWAREINPUT hi;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        struct KEYBDINPUT
+        {
+            public ushort wVk;
+            public ushort wScan;
+            public uint dwFlags;
+            public uint time;
+            public IntPtr dwExtraInfo;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        struct MOUSEINPUT
+        {
+            public int dx;
+            public int dy;
+            public uint mouseData;
+            public uint dwFlags;
+            public uint time;
+            public IntPtr dwExtraInfo;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        struct HARDWAREINPUT
+        {
+            public uint uMsg;
+            public ushort wParamL;
+            public ushort wParamH;
+        }
+
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern uint SendInput(uint nInputs, INPUT[] pInputs, int cbSize);
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X3ZJaIcskeJODw34KcvABN9nH80A9WSxOm3MF/JMIAJiUPddky2Oaapf0XnCG7VUy0Dcv6VI+AhlGCAiszdbag==",
+  "dgSpecHash": "rRGAVkpQ2kep1MMMsh6/NYEx6d/C103MttgIFVa74d+EiR4ZDi09ooGpvvsSx2jObWk5lcWlDYjbruYmX351gA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gabrirodriguez\\Documents\\Joker\\Joker\\Joker.csproj",
+  "projectFilePath": "C:\\Users\\Gabrirodriguez\\Documents\\DevRepo\\Joker\\Joker\\Joker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.6\\microsoft.netcore.app.host.win-x64.6.0.6.nupkg.sha512",
     "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.6\\microsoft.aspnetcore.app.ref.6.0.6.nupkg.sha512",
