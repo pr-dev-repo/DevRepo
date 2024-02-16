@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "i+G8G4aRYAZ8PdjBOTJD3HyXgpO53iUPoeIVi6ipYRdAfaJo+38nqxcimzZpNVYBcmrXe/2HnthbZMI11WV7Gw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gabrirodriguez\\Documents\\DevRepo\\MagicKeys\\MagicKeys\\MagicKeys.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.6\\microsoft.netcore.app.host.win-x64.6.0.6.nupkg.sha512",
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.6\\microsoft.aspnetcore.app.ref.6.0.6.nupkg.sha512",
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.6\\microsoft.windowsdesktop.app.ref.6.0.6.nupkg.sha512",
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.6\\microsoft.netcore.app.ref.6.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}
