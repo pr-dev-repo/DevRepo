@@ -1,0 +1,15 @@
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\bin\Release\net6.0\MagicKeys.exe
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\bin\Release\net6.0\MagicKeys.deps.json
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\bin\Release\net6.0\MagicKeys.runtimeconfig.json
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\bin\Release\net6.0\MagicKeys.dll
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\bin\Release\net6.0\MagicKeys.pdb
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\MagicKeys.csproj.AssemblyReference.cache
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\MagicKeys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\MagicKeys.AssemblyInfoInputs.cache
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\MagicKeys.AssemblyInfo.cs
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\MagicKeys.csproj.CoreCompileInputs.cache
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\MagicKeys.dll
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\refint\MagicKeys.dll
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\MagicKeys.pdb
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\MagicKeys.genruntimeconfig.cache
+C:\Users\Gabrirodriguez\Documents\DevRepo\MagicKeys\MagicKeys\obj\Release\net6.0\ref\MagicKeys.dll

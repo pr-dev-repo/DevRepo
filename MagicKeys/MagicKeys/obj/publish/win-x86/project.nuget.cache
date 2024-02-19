@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "JgX5FKg45/zP16v3lB3BWhmIjxdy+M4fikPraFkSXLFhN4muTHFx832yUHpGhW0m7acmEa2bL0tcojD26RgLPQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gabrirodriguez\\Documents\\DevRepo\\MagicKeys\\MagicKeys\\MagicKeys.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.6\\microsoft.netcore.app.ref.6.0.6.nupkg.sha512",
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.6\\microsoft.netcore.app.runtime.win-x86.6.0.6.nupkg.sha512",
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.6\\microsoft.windowsdesktop.app.ref.6.0.6.nupkg.sha512",
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.6\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.6.nupkg.sha512",
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.6\\microsoft.aspnetcore.app.ref.6.0.6.nupkg.sha512",
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.6\\microsoft.aspnetcore.app.runtime.win-x86.6.0.6.nupkg.sha512",
+    "C:\\Users\\Gabrirodriguez\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\6.0.6\\microsoft.netcore.app.host.win-x86.6.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}
