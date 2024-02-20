@@ -32,6 +32,8 @@ namespace MagicKeys
 
             bool isActive = true;
 
+            Console.WriteLine($"Hello {Environment.UserName}, MagicKeys is running ...");
+
             while (isActive)
             {
                 MoveMouse(MOUSE_MOVE_AMOUNT);
