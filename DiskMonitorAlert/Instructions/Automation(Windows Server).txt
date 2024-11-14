@@ -1,0 +1,7 @@
+Set Up Scheduled Task for Automation (Optional) To run this script at regular intervals, you can set up a scheduled task on Windows:
+
+Open Task Scheduler.
+Click on Create Basic Task and name it DiskMonitorAlert.
+Set up a trigger (e.g., Daily or Weekly).
+Under Action, choose Start a Program and select the Python executable path (e.g., C:\Python311\python.exe) with disk_monitor.py as the argument.
+Save and exit Task Scheduler.
