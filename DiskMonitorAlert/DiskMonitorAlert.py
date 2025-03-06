@@ -1,6 +1,7 @@
 import os
 import psutil
 import base64
+from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
@@ -31,7 +32,7 @@ def send_alert_email(creds, disk_usage):
     try:
         service = build('gmail', 'v1', credentials=creds)
         message = MIMEText(f"Warning: The C: drive is at {disk_usage}% capacity.")
-        message['to'] = "gabrirodriguez@gmail.com"
+        message['to'] = "g-rodz@hotmail.com"
         message['from'] = "cdle.dms.services@gmail.com"
         message['subject'] = "Disk Space Alert: C: Drive Over 90% Capacity"
         raw = base64.urlsafe_b64encode(message.as_bytes()).decode()
