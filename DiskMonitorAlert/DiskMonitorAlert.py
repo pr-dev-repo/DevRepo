@@ -32,7 +32,7 @@ def send_alert_email(creds, disk_usage):
     try:
         service = build('gmail', 'v1', credentials=creds)
         message = MIMEText(f"Warning: The C: drive is at {disk_usage}% capacity.")
-        message['to'] = "g-rodz@hotmail.com"
+        message['to'] = "gabrirodriguez@gmail.com"
         message['from'] = "cdle.dms.services@gmail.com"
         message['subject'] = "Disk Space Alert: C: Drive Over 90% Capacity"
         raw = base64.urlsafe_b64encode(message.as_bytes()).decode()
